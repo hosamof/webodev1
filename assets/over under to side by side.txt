@@ -1,0 +1,3 @@
+ffmpeg -i xxx2.mp4 -vf stereo3d=abl:sbsl -c:a copy xxx3.mp4
+
+ffmpeg -i xxx2.mp4 -vf "stereo3d=abl:sbsl,scale=1920x1080" -aspect 16:9 -c:a copy xxx4.mp4

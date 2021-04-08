@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2902.9434 125.01916">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        stroke: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="329.07318" y1="-637.80384" x2="3332.13209" y2="1231.48858" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.2163" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="0.48388" stop-color="#fff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="123.51916" x2="2902.9434" y2="123.51916" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.48155" stop-color="#b3b3b3"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="ON_TOP" data-name="ON TOP">
+      <rect class="cls-1" width="2902.9434" height="121.69494"/>
+      <line class="cls-2" y1="123.51916" x2="2902.9434" y2="123.51916"/>
+    </g>
+  </g>
+</svg>
