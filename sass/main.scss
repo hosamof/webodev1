@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+    .container {        
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #a0a1a0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .bg {            
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            video {
+                width: 100%;
+                height: 100%;                
+                 // to avoid space right & left
+                 z-index: 1;
+                object-fit: fill;
+            }                       
+        }
+        .overlay{
+            z-index: 2;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+        }
+        .logo {
+            z-index: 3;
+            margin-bottom: 5%;
+        }
+        .line {
+            z-index: 3;
+            margin-bottom: 1%;            
+            width: 40%;
+            height: 3px;
+            border-radius: 50%;
+            background-image: linear-gradient(
+                45deg
+                , #d5afff, #8a3dff);
+        }
+        .options {
+            z-index: 3;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            // background-color: red;
+            a {
+                margin: 5%;
+                img {
+                    transition: transform 0.5s;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
