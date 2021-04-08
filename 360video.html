@@ -3,103 +3,115 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Video</title>
+    <title>Humam Alayad</title>
     <meta name="description" content="Video - A-Frame">
-    <!-- 
-        https://github.com/aframevr/aframe/tree/v1.0.4/dist
-        <script src="../../../dist/aframe-master.js"></script>
-    <script src="../../js/play-on-click.js"></script><script src="https://github.com/aframevr/aframe/blob/master/examples/js/play-on-click.js">
-    <script src="../../js/hide-on-play.js"></script> <script src="https://github.com/aframevr/aframe/blob/master/examples/js/hide-on-play.js">
--->
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script>
-        /* global AFRAME */
-        AFRAME.registerComponent('play-on-click', {
-            init: function () {
-                this.onClick = this.onClick.bind(this);
-            },
-            play: function () {
-                window.addEventListener('click', this.onClick);
-            },
-            pause: function () {
-                window.removeEventListener('click', this.onClick);
-            },
-            onClick: function (evt) {
-                var videoEl = this.el.getAttribute('material').src;
-                if (!videoEl) { return; }
-                this.el.object3D.visible = true;
-                videoEl.play();
-            }
-        });
-    </script>
-    <script>
-        /* global AFRAME */
-        AFRAME.registerComponent('hide-on-play', {
-            schema: { type: 'selector' },
-            init: function () {
-                this.onPlaying = this.onPlaying.bind(this);
-                this.onPause = this.onPause.bind(this);
-                this.el.object3D.visible = !this.data.playing;
-            },
-            play: function () {
-                if (this.data) {
-                    this.data.addEventListener('playing', this.onPlaying);
-                    this.data.addEventListener('pause', this.onPause);
-                }
-            },
-            pause: function () {
-                if (this.data) {
-                    this.data.removeEventListener('playing', this.onPlaying);
-                    this.data.removeEventListener('pause', this.onPause);
-                }
-            },
-            onPlaying: function (evt) {
-                this.el.object3D.visible = false;
-            },
-            onPause: function (evt) {
-                this.el.object3D.visible = true;
-            }
-        });
-    </script>
+    <!-- <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> -->
+    <script src="js/aframe-1.2.0.min.js"></script>
+    <script src="js/look-control.js"></script>
+    <script src="js/vr.js"></script>
+    <!-- for streaming -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 
 <body>
     <a-scene>
+        <!-- https://www.youtube.com/watch?v=ZFTSLHd7xgY -->
+        <!-- Asset Management System -->
         <a-assets>
-            <video id="videoBunny" preload="auto" src="https://cdn.aframe.io/videos/bunny.mp4" width="160" height="90"
-                autoplay loop="true" crossOrigin="anonymous" muted></video>
-            <video id="videoFireworks" preload="auto" src="https://cdn.aframe.io/videos/fireworks.mp4" width="160"
-                height="90" autoplay loop="true" crossOrigin="anonymous" muted></video>
+            <!-- <video  id="gmTurtles" src="assets/360_VR Master Series _ Free Download _ London On Tower Bridge.mp4" loop="true"
+                crossOrigin="anonymous" muted  preload="auto" autoplay></video> -->
+            <img id="cv" src="assets/img/cv-icon.png" alt="CV">
+            <img id="home" src="assets/img/home-icon.png" alt="CV">
+            <!-- using vimeo :https://stackoverflow.com/questions/35055233/vimeo-video-player-in-html5 -->
+            <video width="2000" height="1000" id="gmTurtles" loop="true" muted="muted"></video>
         </a-assets>
+        <!-- <video style="display: block;" id="gmTurtles" src="assets/xxx.mp4" muted preload="auto" loop="true"></video> -->
+        <!-- <video style="display: block;" id="gmTurtles2" src="assets/xxx2.mp4" autoplay="autoplay" muted preload="auto"
+            loop="true" autoplay></video> 
+            look-controls="pointerLockEnabled: true,mouseEnabled: false,touchEnabled: false,enabled: false
+        -->
 
-        <!--
-      SOURCE
-      Title:  Big Buck Bunny
-      Author: Blender Institute
-      URL:    https://peach.blender.org/
-      -->
-        <a-entity material="shader: flat; src: #videoBunny" geometry="primitive: plane; width: 160; height: 90;"
-            position="0 60 -250" rotation="0 35 0" play-on-click visible="false">
-        </a-entity>
-
-        <!--
-      SOURCE
-      Title:  Fireworks
-      Author: Motion Digital
-      URL:    https://www.videvo.net/profile/motiondigital/
-      -->
-        <a-entity material="shader: flat; src: #videoFireworks" geometry="primitive: plane; width: 160; height: 90"
-            position="0 -60 -200" rotation="0 -35 0" play-on-click visible="false">
-        </a-entity>
-        <a-camera>
-            <a-entity position="0 0 -1.5" text="align: center;
-                width: 6;
-                wrapCount: 100;
-                color: black;
-                value: Click or tap to start video" hide-on-play="#videoFireworks">
-            </a-entity>
+        <!-- Carmera -->
+        <a-camera look-controls="touchEnabled: true">
+            <a-cursor color="#fff" attribute="sacle" from="1 1 1" to="2 2 1" begin="click"></a-cursor>
         </a-camera>
+
+        <!-- Hotspots -->
+        <!-- anim: https://aframe.io/docs/1.2.0/components/animation.html -->
+        <a-image material="shader: standard;emissive: #fff; emissiveIntensity: 0.0"
+            animation__mouseenter="property: components.material.material.emissiveIntensity; to: 0.2; startEvents: mouseenter; dur: 500"
+            animation__mouseleave="property: components.material.material.emissiveIntensity; to: 0.0; startEvents: mouseleave; dur: 500"
+            my-elements="next" src="#cv" position="0 3 -5" scale="1.5 1.5 1.5"></a-image>
+        <a-image material="shader: standard;emissive: #fff; emissiveIntensity: 0.0"
+            animation__mouseenter="property: components.material.material.emissiveIntensity; to: 0.2; startEvents: mouseenter; dur: 500"
+            animation__mouseleave="property: components.material.material.emissiveIntensity; to: 0.0; startEvents: mouseleave; dur: 500"
+            my-elements="next" src="#home" position="2 3 -5" scale="2 2 2"></a-image>
+        <!-- 360 video -->
+        <a-videosphere my-elements="videosphere" src="#gmTurtles"></a-videosphere>
     </a-scene>
+    <!-- STREAMING -->
+    <script>
+        const videoEl = document.querySelector('#gmTurtles');
+        let src = 'assets/xxx.mp4';
+        // for ios always play as stream
+        if (iOS()) {
+            src = 'assets/xxx.mp4';
+        }
+
+        // playing according to video source
+        if (!src.includes('.mp4')) {
+            if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
+                // Some browers (safari and ie edge) support HLS natively
+                videoEl.src = src;
+            } else if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(src)
+                hls.attachMedia(videoEl);
+            } else {
+                console.error("This is a legacy browser that doesn't support MSE");
+            }
+        } else {
+            videoEl.src = src;
+            // videoEl.muted = false;           
+        }
+        videoEl.play();
+
+        function iOS() {
+            return [
+                'iPad Simulator',
+                'iPhone Simulator',
+                'iPod Simulator',
+                'iPad',
+                'iPhone',
+                'iPod'
+            ].includes(navigator.platform)
+                // iPad on iOS 13 detection
+                ||
+                (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        }
+    </script>    
+
+    <!-- global data -->
+    <script>
+        var home_url = `/`;
+        var prev_url = `assets/xxx.mp4`;
+        var next_url = `assets/xxx.mp4`;
+
+        // playing audio
+        console.log('has_sound: ' + has_sound);
+        if (!has_sound) {
+            var audio = document.getElementById('audio');
+            // var audio = new Audio('main_track.mp3');        
+            window.addEventListener('touchmove', checkAudio);
+            window.addEventListener('mousedown', checkAudio);
+            if (audio) audio.play();
+
+            function checkAudio() {
+                if (audio && audio.paused) audio.play();
+            };
+        }
+    </script>
+
 </body>
 
 </html>
