@@ -1,17 +1,60 @@
 // data
-var pins_data =
-{
-    pin1: {        
-        title: 'PHP',
-        locations: [{
-            title: 'Boraq',
-            url: 'https://google.com',
+var jobs = {
+    title: 'PREVIOUS JOBS:',
+    locations: [{
+        title: 'YAMAN-NET (Syria): 2013-2015 / Administrator- software engineer',
+        url: 'https://google.com',
+    },
+    {
+        title: 'Elma Technology (Istanbul): 2017-2018 / Backend & Mobile Developer',
+        url: 'https://google.com',
+    },
+    {
+        title: 'Boraq Group (Istanbul): 2018-2020 / Backend & Mobile Developer',
+        url: 'https://boraq-group.com/en',
+    },
+    {
+        title: 'CARBON (Istanbul): 2020-2021 / Software Engineer',
+        url: 'https://carboncd.com',
+    },
+    ],
+};
+var works = {
+    title: 'SOME OF MY WORKS:',
+    locations: [
+        {
+            title: 'LARAVEL + REACT JS + SASS media production website',
+            url: 'https://carboncd.com',
         },
         {
-            title: 'Boraq',
-            url: 'https://google.com',
-        }],
-    }
+            title: 'Dart / Flutter (with Magento Backend) - Online shop for auto parts : [Android Ver]',
+            url: 'https://play.google.com/store/apps/details?id=com.rafraf.store',
+        },
+        {
+            title: 'Dart / Flutter – Android / IOS Ecommerce Application (for Woocomerce ecommerce website): [Android Ver]',
+            url: 'https://play.google.com/store/apps/details?id=com.turksey.marketplace',
+        },
+        {
+            title: 'Dart / Flutter – Android / IOS Ecommerce Application (for Woocomerce ecommerce website): [IOS Ver]',
+            url: 'https://apps.apple.com/us/app/turksey-shopping-online/id1487432922',
+        },
+    ],
+};
+var pins_data =
+{
+    pin1: works,
+    pin2: jobs,
+    pin3: works,
+    pin4: jobs,
+    pin5: works,
+    pin6: jobs,
+    pin7: works,
+    pin8: jobs,
+    pin9: works,
+    pin10: jobs,
+    pin11: works,
+    pin12: jobs,
+    pin13: works,    
 };
 
 $(function () {
@@ -129,7 +172,7 @@ $(function () {
                     const el = loc.locations[key];
                     if (el && el.title && el.url) {
                         const subtitle = (el.subtitle ? `<span>&nbsp;${el.subtitle}</span>` : '');
-                        const d = `<li url="?page=${el.url}">${playIcon + el.title + subtitle}</li>`;
+                        const d = `<li url="${el.url}">${playIcon + el.title + subtitle}</li>`;
                         $('.info-box ul').append(d);
                     }
                 }
@@ -137,7 +180,8 @@ $(function () {
 
             // set elements click listener
             $('.info-box ul li').click(function () {
-                window.location.href = $(this).attr('url');
+                // window.location.href = $(this).attr('url');
+                window.open($(this).attr('url'), '_blank').focus();
             });
         }
 

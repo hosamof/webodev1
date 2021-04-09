@@ -409,9 +409,9 @@ footer .copyright a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -555,6 +555,10 @@ footer .copyright a {
             animation: upLogo 0.75s ease;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+  }
+  main .details.hide-remove .header .logo .title h2, main .details.hide-remove .header .logo .title h3 {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   @-webkit-keyframes upLogo {
     0% {
@@ -1090,9 +1094,9 @@ footer .copyright a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

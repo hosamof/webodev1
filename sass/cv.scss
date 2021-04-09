@@ -266,7 +266,7 @@ footer {
       .logo {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         // background-color: red;
         .title {
@@ -310,7 +310,7 @@ footer {
         .logo {
           width: 50%;
           animation: downLogo 0.75s ease;
-          animation-fill-mode: forwards;
+          animation-fill-mode: forwards;          
         }
         @keyframes downLogo {
           0% {
@@ -353,6 +353,11 @@ footer {
             width: 100%;
             animation: upLogo 0.75s ease;
             animation-fill-mode: forwards;
+            .title{
+              h2,h3{
+                transform: scale(0.8);
+              }
+            }
           }
         }
         @keyframes upLogo {
@@ -762,7 +767,7 @@ footer {
       .logo {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         // background-color: red;
         .title {
