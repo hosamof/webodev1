@@ -1,3 +1,19 @@
+// data
+var pins_data =
+{
+    pin1: {        
+        title: 'PHP',
+        locations: [{
+            title: 'Boraq',
+            url: 'https://google.com',
+        },
+        {
+            title: 'Boraq',
+            url: 'https://google.com',
+        }],
+    }
+};
+
 $(function () {
     // zoom on mobile: - https://hammerjs.github.io/getting-started/
     // https://d19jftygre6gh0.cloudfront.net/stephanbogner/06c3e0d3a1c8fcca61b5345e1af80798
@@ -97,9 +113,9 @@ $(function () {
 
     // ##### functions #####
     function initData(pin) {
-        var locs = JSON.parse(locations);
-        if (lang == 'en') locs = locs.en;
-        else locs = locs.ar;
+        // var locs = JSON.parse(pins_data);
+        var locs = pins_data;
+        console.log(locs['php']);
         if (locs[pin.id]) {
             let loc = locs[pin.id];
 
@@ -111,9 +127,9 @@ $(function () {
             for (const key in loc.locations) {
                 if (Object.hasOwnProperty.call(loc.locations, key)) {
                     const el = loc.locations[key];
-                    if (el && el.title && el.page) {
+                    if (el && el.title && el.url) {
                         const subtitle = (el.subtitle ? `<span>&nbsp;${el.subtitle}</span>` : '');
-                        const d = `<li url="?page=${el.page}&loc=${el.loc}&index=${el.index}">${playIcon + el.title + subtitle}</li>`;
+                        const d = `<li url="?page=${el.url}">${playIcon + el.title + subtitle}</li>`;
                         $('.info-box ul').append(d);
                     }
                 }
