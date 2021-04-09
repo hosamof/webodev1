@@ -172,16 +172,12 @@ footer {
           }
           @keyframes mapLinesAnim {
             0% {
-              filter: drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44);
+              filter: drop-shadow(0px 0px 4px #53499d44) drop-shadow(0px 0px 4px #53499d44)
+                drop-shadow(0px 0px 4px #53499d44) drop-shadow(0px 0px 4px #53499d44);
             }
             100% {
-              filter: drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff);
+              filter: drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff)
+                drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff);
             }
           }
         }
@@ -255,7 +251,7 @@ footer {
         rgba(10, 21, 45, 1) 40%,
         rgba(10, 21, 45, 0.8) 60%,
         rgba(10, 21, 45, 0) 100%
-      );      
+      );
     }
     .details {
       z-index: 2;
@@ -266,9 +262,50 @@ footer {
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
+      //logo section
+      .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+        .title {
+          flex: 0 0 70%;
+          // background-color: blue;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 50%;
+          color: #424079;
+          font-weight: 900;
+          h2 {
+            font-size: 5vw;
+            line-height: 5vw;
+          }
+          h3 {
+            font-size: 3vw;
+            line-height: 3vw;
+          }
+          h2,
+          h3 {
+            filter: drop-shadow(0px 0px 6px #424079);
+            margin: 0;
+            padding: 0;
+          }
+        }
+        img {
+          flex: 0 0 30%;
+          object-fit: contain;
+          width: 80%;
+          height: 50%;
+          filter: hue-rotate(45deg) drop-shadow(0px 0px 9px #424079);
+        }
+      }
+      //logo section
 
       // set hide/show (first showing logo just)
-
       &.hide {
         .logo {
           width: 50%;
@@ -527,23 +564,19 @@ footer {
         }
         @keyframes footerIconAnim {
           0% {
-            filter: drop-shadow(0px 0px 4px #53499d00)
-              drop-shadow(0px 0px 4px #53499d00)
+            filter: drop-shadow(0px 0px 4px #53499d00) drop-shadow(0px 0px 4px #53499d00)
               drop-shadow(0px 0px 4px #53499d00);
           }
           33% {
-            filter: drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
-              drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
+            filter: drop-shadow(0px 0px 4px rgba(93, 188, 114, 1)) drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
               drop-shadow(0px 0px 4px rgba(93, 188, 114, 1));
           }
           67% {
-            filter: drop-shadow(0px 0px 4px #53499dff)
-              drop-shadow(0px 0px 4px #53499dff)
+            filter: drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff)
               drop-shadow(0px 0px 4px #53499dff);
           }
           100% {
-            filter: drop-shadow(0px 0px 4px #53499d00)
-              drop-shadow(0px 0px 4px #53499d00)
+            filter: drop-shadow(0px 0px 4px #53499d00) drop-shadow(0px 0px 4px #53499d00)
               drop-shadow(0px 0px 4px #53499d00);
           }
         }
@@ -650,16 +683,12 @@ footer {
           }
           @keyframes mapLinesAnim {
             0% {
-              filter: drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44)
-                drop-shadow(0px 0px 4px #53499d44);
+              filter: drop-shadow(0px 0px 4px #53499d44) drop-shadow(0px 0px 4px #53499d44)
+                drop-shadow(0px 0px 4px #53499d44) drop-shadow(0px 0px 4px #53499d44);
             }
             100% {
-              filter: drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff)
-                drop-shadow(0px 0px 4px #53499dff);
+              filter: drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff)
+                drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff);
             }
           }
         }
@@ -729,6 +758,48 @@ footer {
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
+      //logo section
+      .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+        .title {
+          flex: 0 0 50%;
+          // background-color: blue;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 80%;
+          height: 50%;
+          color: #424079;
+          font-weight: 900;
+          h2 {
+            font-size: 5vw;
+            line-height: 5vw;
+          }
+          h3 {
+            font-size: 3vw;
+            line-height: 3vw;
+          }
+          h2,
+          h3 {
+            filter: drop-shadow(0px 0px 6px #424079);
+            margin: 0;
+            padding: 0;
+          }
+        }
+        img {
+          flex: 0 0 50%;
+          object-fit: contain;
+          width: 80%;
+          height: 50%;
+          filter: hue-rotate(45deg) drop-shadow(0px 0px 9px #424079);
+        }
+      }
+      //logo section
       .header {
         flex: 0 0 100%;
         width: 100%;
@@ -887,23 +958,19 @@ footer {
         }
         @keyframes footerIconAnim {
           0% {
-            filter: drop-shadow(0px 0px 4px #53499d00)
-              drop-shadow(0px 0px 4px #53499d00)
+            filter: drop-shadow(0px 0px 4px #53499d00) drop-shadow(0px 0px 4px #53499d00)
               drop-shadow(0px 0px 4px #53499d00);
           }
           33% {
-            filter: drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
-              drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
+            filter: drop-shadow(0px 0px 4px rgba(93, 188, 114, 1)) drop-shadow(0px 0px 4px rgba(93, 188, 114, 1))
               drop-shadow(0px 0px 4px rgba(93, 188, 114, 1));
           }
           67% {
-            filter: drop-shadow(0px 0px 4px #53499dff)
-              drop-shadow(0px 0px 4px #53499dff)
+            filter: drop-shadow(0px 0px 4px #53499dff) drop-shadow(0px 0px 4px #53499dff)
               drop-shadow(0px 0px 4px #53499dff);
           }
           100% {
-            filter: drop-shadow(0px 0px 4px #53499d00)
-              drop-shadow(0px 0px 4px #53499d00)
+            filter: drop-shadow(0px 0px 4px #53499d00) drop-shadow(0px 0px 4px #53499d00)
               drop-shadow(0px 0px 4px #53499d00);
           }
         }
