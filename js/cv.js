@@ -3,11 +3,11 @@ var jobs = {
     title: 'PREVIOUS JOBS:',
     locations: [{
         title: 'YAMAN-NET (Syria): 2013-2015 / Administrator- software engineer',
-        url: 'https://google.com',
+        url: 'https://boraq-group.com/en',
     },
     {
         title: 'Elma Technology (Istanbul): 2017-2018 / Backend & Mobile Developer',
-        url: 'https://google.com',
+        url: 'https://carboncd.com',
     },
     {
         title: 'Boraq Group (Istanbul): 2018-2020 / Backend & Mobile Developer',
