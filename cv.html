@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1.0">
     <title>Humam CV</title>
     <link rel="stylesheet" href="../css/cv.css?version=9">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js?version=9" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?version=9"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="https://hammerjs.github.io/dist/hammer.min.js"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/svgs.js?version=9"></script>
     <script src="../js/cv.js?version=9"></script>
 </head>
@@ -17,30 +19,35 @@
 <body>
     <header>
         <img class="bg" src="../assets/img/top-bar.png">
+        <div class="menu">
+            <a class="m-item" target="_blank" href="/">Home</a>
+            <a id="profile-btn" class="m-item" target="_blank">My Profile</a>
+            <a class="m-item" target="_blank" href="/cv.pdf">PDF CV</a>
+        </div>
         <!-- <div class="bg"></div> -->
         <div class="social">
             <a class="s-icon" target="_blank" href="#"><img src="../assets/img/facebook.svg"></a>
             <a class="s-icon" target="_blank" href="#"><img src="../assets/img/instagram.svg"></a>
-            <a class="s-icon" target="_blank" href="#"><img src="../assets/img/twitter.svg"></a>            
+            <a class="s-icon" target="_blank" href="#"><img src="../assets/img/twitter.svg"></a>
         </div>
     </header>
     <main>
         <div class="overlay"></div>
         <div id="zoomable" class="map">
-            <div id="map-container" class="map-container">                
+            <div id="map-container" class="map-container">
                 <img class="map-image is-png" src="../assets/img/tech-map7.png" alt="Map">
                 <img class="map-image is-png map-lines" src="../assets/img/main-1.png" alt="Map">
                 <script>
                     document.write(mapImgCircles);
                 </script>
-            </div>            
+            </div>
             <script>
                 document.write(zoomIcon);
             </script>
         </div>
         <div class="hover-map"></div>
         <div class="details hide">
-            <div class="header">               
+            <div class="header">
                 <div class="logo">
                     <div class="title">
                         <h2>Humam</h2>
@@ -51,15 +58,15 @@
             </div>
             <div class="body">
                 <img class="info-icon" src="../assets/img/info-icon.svg" alt="info">
-                <div class="info-box">                    
+                <div class="info-box">
                     <img class="close-icon" src="../assets/img/close-icon.svg" alt="info">
                     <h2 id="info-title"></h2>
-                    <ul>                        
+                    <ul>
                     </ul>
                 </div>
             </div>
             <div class="footer">
-                <img class="icon" src="" alt="icon">               
+                <img class="icon" src="" alt="icon">
             </div>
         </div>
     </main>

@@ -26,7 +26,32 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  .menu {
+    z-index: 4;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .m-item {
+      // width: 70px;
+      height: 18px;
+      margin: 0px 15px;
+      cursor: pointer;
+      transition: border-radius 0.5s ease;
+      filter: none;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        filter: drop-shadow(0px 0px 3px #fff);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   .social {
     z-index: 4;
     margin-right: 30px;
@@ -310,7 +335,7 @@ footer {
         .logo {
           width: 50%;
           animation: downLogo 0.75s ease;
-          animation-fill-mode: forwards;          
+          animation-fill-mode: forwards;
         }
         @keyframes downLogo {
           0% {
@@ -353,8 +378,9 @@ footer {
             width: 100%;
             animation: upLogo 0.75s ease;
             animation-fill-mode: forwards;
-            .title{
-              h2,h3{
+            .title {
+              h2,
+              h3 {
                 transform: scale(0.8);
               }
             }

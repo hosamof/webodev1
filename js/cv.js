@@ -54,7 +54,7 @@ var pins_data =
     pin10: jobs,
     pin11: works,
     pin12: jobs,
-    pin13: works,    
+    pin13: works,
 };
 
 $(function () {
@@ -439,3 +439,22 @@ function isMobile2() {
     }
     return false;
 }
+
+$(() => {
+    // profile btn 
+    $('#profile-btn').click((e) => {
+        msg = `
+        HUMAM ALAYAD - SOFTWARE ENGINEER
+        ---------------------
+        Birth: 1992 - Married (has two children)
+        +90 0531 236 18 95
+        humam.alayad@ogr.iu.edu.tr
+        Istanbul - Bağcılar
+        ---------------------
+        EDUCATION AND TRAINING:
+        Information Engineering - Damascus University(2010 – 2012)
+        Computer Engineering - Istanbul University (2018 – 2021)    
+    `;
+        swal(msg);
+    });
+})
