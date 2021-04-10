@@ -1,0 +1,13 @@
+getaCert - Free Digital Certificates
+Your self-signed certificate page :
+Private key : wild.humam.live-2021-04-10-122742.pkey
+Certificate request (.csr): wild.humam.live-2021-04-10-122742.csr
+Public key(.cer) : wild.humam.live-2021-04-10-122742.cer
+Entire certificate (pkcs12) : wild.humam.live-2021-04-10-122742.p12
+Note: Your certificate password is the word 'password' (without any quote marks)
+
+
+About Us	 | 	Privacy Statement	 | 	Home
+PayPal - The safer, easier way to pay online! 
+
+

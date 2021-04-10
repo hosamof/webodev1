@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/6307886/how-to-create-pfx-file-from-certificate-and-private-key
+
+openssl pkcs12 -export -out domain.name.pfx -inkey domain.name.key -in domain.name.crt
+
+
+openssl pkcs12 -export -out humam.live.pfx -inkey private.key -in humam.live.crt
