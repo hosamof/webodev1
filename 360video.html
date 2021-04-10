@@ -41,11 +41,11 @@
         <a-image material="shader: standard;emissive: #fff; emissiveIntensity: 0.0"
             animation__mouseenter="property: components.material.material.emissiveIntensity; to: 0.2; startEvents: mouseenter; dur: 500"
             animation__mouseleave="property: components.material.material.emissiveIntensity; to: 0.0; startEvents: mouseleave; dur: 500"
-            my-elements="next" src="#cv" position="0 3 -5" scale="1.5 1.5 1.5"></a-image>
+            my-elements="cv" src="#cv" position="0 3 -5" scale="1.5 1.5 1.5"></a-image>
         <a-image material="shader: standard;emissive: #fff; emissiveIntensity: 0.0"
             animation__mouseenter="property: components.material.material.emissiveIntensity; to: 0.2; startEvents: mouseenter; dur: 500"
             animation__mouseleave="property: components.material.material.emissiveIntensity; to: 0.0; startEvents: mouseleave; dur: 500"
-            my-elements="next" src="#home" position="2 3 -5" scale="2 2 2"></a-image>
+            my-elements="home" src="#home" position="2 3 -5" scale="2 2 2"></a-image>
         <!-- 360 video -->
         <a-videosphere my-elements="videosphere" src="#gmTurtles"></a-videosphere>
     </a-scene>
@@ -94,22 +94,7 @@
     <!-- global data -->
     <script>
         var home_url = `/`;
-        var prev_url = `assets/xxx.mp4`;
-        var next_url = `assets/xxx.mp4`;
-
-        // playing audio
-        console.log('has_sound: ' + has_sound);
-        if (!has_sound) {
-            var audio = document.getElementById('audio');
-            // var audio = new Audio('main_track.mp3');        
-            window.addEventListener('touchmove', checkAudio);
-            window.addEventListener('mousedown', checkAudio);
-            if (audio) audio.play();
-
-            function checkAudio() {
-                if (audio && audio.paused) audio.play();
-            };
-        }
+        var cv_url = `/cv.html`;        
     </script>
 
 </body>

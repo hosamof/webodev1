@@ -11,21 +11,16 @@ AFRAME.registerComponent('my-elements', {
         var vidSphere = document.querySelector('a-videosphere');;
 
         switch (this.data) {
-            case 'next':
+            case 'cv':
                 // events: click - mouseenter - mouseleave
-                this.el.addEventListener("mouseenter", () => onMouseEnter(this, next_url));
+                this.el.addEventListener("mouseenter", () => onMouseEnter(this, cv_url));
                 this.el.addEventListener("mouseleave", () => onMouseLeave(this));
                 break;
 
             case 'home':
                 this.el.addEventListener("mouseenter", () => onMouseEnter(this, home_url));
                 this.el.addEventListener("mouseleave", () => onMouseLeave(this));
-                break;
-
-            case 'prev':
-                this.el.addEventListener("mouseenter", () => onMouseEnter(this, prev_url));
-                this.el.addEventListener("mouseleave", () => onMouseLeave(this));
-                break;
+                break;         
 
             case 'videosphere':
                 // https://aframe.io/docs/1.2.0/primitives/a-videosphere.html
@@ -65,7 +60,7 @@ AFRAME.registerComponent('my-elements', {
             }
         }
         function goVideo(url) {
-            // 1- by change video
+            // 1- change video
             // if (vidSphere) {
             //     vidSphere.setAttribute('src', url);
             //     vidSphere.components.material.data.src.currentTime = 0;
@@ -77,7 +72,7 @@ AFRAME.registerComponent('my-elements', {
             // var c = url.searchParams.get("c");
             // console.log(c);
 
-            // 2- by change url
+            // 2- change url
             window.location.href = url;
         }
 
