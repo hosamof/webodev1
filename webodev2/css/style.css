@@ -1,0 +1,297 @@
+body {
+  color: white;
+  background-color: #0a152d;
+  height: 100%;
+  margin: 0;
+}
+
+main .page,
+main #game-box,
+main #game-over {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #intro h1 {
+  margin-bottom: 5%;
+}
+
+main #intro h3 {
+  margin-bottom: 2%;
+}
+
+main #intro ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #intro ul li {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2px;
+  color: #0a152d;
+  font-weight: 900;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+}
+
+main #intro ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #8cfd52;
+}
+
+main #game-box {
+  padding: 3%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #game-box .header {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #game-box .header .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #game-box .header .next .home-btn {
+  background-color: #5b8cca;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: #0a152d;
+  font-size: 1.3rem;
+  font-weight: 700;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+          box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+}
+
+main #game-box .header .next .home-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #8cfd52;
+}
+
+main #game-box .header .next p {
+  margin: 5px;
+}
+
+main #game-box .header .next #color-box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+main #game-box .body {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #game-box .body .game-frame {
+  width: 25vw;
+  height: 25vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+main #game-box .body .game-frame .item {
+  background-color: red;
+  border: 1px solid black;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+main #game-over {
+  padding: 3%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #game-over .header {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #game-over .header h1 {
+  font-size: 3rem;
+  text-shadow: 5px 3px 3px #985f4e;
+}
+
+main #game-over .body {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #game-over .body #high-score {
+  color: #de8c8c;
+}
+
+main #game-over .body .score-title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+main #game-over .body #score {
+  background-color: rgba(44, 94, 160, 0.5);
+  margin-bottom: 50px;
+  padding: 30px 150px;
+  font-size: 3rem;
+  font-weight: 900;
+  border-radius: 10px;
+  border: solid white 1px;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+          box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+}
+
+main #game-over .body .buttons {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main #game-over .body .buttons .my-btn {
+  background-color: #5b8cca;
+  padding: 15px;
+  border-radius: 5px;
+  color: #0a152d;
+  font-size: 2rem;
+  font-weight: 900;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+          box-shadow: 1px 1px 5px 2px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 0.5s;
+  transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+}
+
+main #game-over .body .buttons .my-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #8cfd52;
+}
+/*# sourceMappingURL=style.css.map */
